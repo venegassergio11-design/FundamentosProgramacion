@@ -1,0 +1,183 @@
+//Practica5
+
+EJERCICIO 10 (BASE – venta de 2 productos)
+public class Ejercicio10 {
+
+    public static void main(String[] args) {
+
+        double prod1 = 25.50;
+        double prod2 = 13.75;
+        double iva = 0.16;
+
+        double subtotal = prod1 + prod2;
+        double ivaTotal = subtotal * iva;
+        double total = subtotal + ivaTotal;
+
+        System.out.println("Producto 1: " + prod1);
+        System.out.println("Producto 2: " + prod2);
+        System.out.println("Subtotal: " + subtotal);
+        System.out.println("IVA: " + ivaTotal);
+        System.out.println("Total: " + total);
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EJERCICIO 10_B (AGREGANDO 2 PRODUCTOS MÁS)
+public class Ejercicio10_b {
+
+    public static void main(String[] args) {
+
+        double p1 = 25.5;
+        double p2 = 13.75;
+        double p3 = 40.25;
+        double p4 = 18.90;
+        double iva = 0.16;
+
+        double subtotal = p1 + p2 + p3 + p4;
+        double ivaTotal = subtotal * iva;
+        double total = subtotal + ivaTotal;
+
+        System.out.println("Subtotal: " + subtotal);
+        System.out.println("IVA: " + ivaTotal);
+        System.out.println("Total: " + total);
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EJERCICIO 11_B (con JOptionPane y 4 productos)
+import javax.swing.JOptionPane;
+
+public class Ejercicio11_b {
+
+    public static void main(String[] args) {
+
+        double p1 = 20;
+        double p2 = 15;
+        double p3 = 30;
+        double p4 = 10;
+
+        double iva = 0.16;
+
+        double subtotal = p1 + p2 + p3 + p4;
+        double ivaTotal = Math.round(subtotal * iva * 100) / 100.0;
+        double total = Math.round((subtotal + ivaTotal) * 100) / 100.0;
+
+        JOptionPane.showMessageDialog(null,
+                "Subtotal: " + subtotal +
+                "\nIVA: " + ivaTotal +
+                "\nTotal: " + total);
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EJERCICIO 12_B
+(4 productos + columna precio)
+import javax.swing.JOptionPane;
+
+public class Ejercicio12_b {
+
+    public static void main(String[] args) {
+
+        String p1 = "Refresco";
+        String p2 = "Sabritas";
+        String p3 = "Chocolate";
+        String p4 = "Galletas";
+
+        double pr1 = 20;
+        double pr2 = 15;
+        double pr3 = 25;
+        double pr4 = 10;
+
+        double iva = 0.16;
+
+        double subtotal = pr1 + pr2 + pr3 + pr4;
+        double ivaTotal = (int)(subtotal * iva * 100) / 100.0;
+        double total = (int)((subtotal + ivaTotal) * 100) / 100.0;
+
+        JOptionPane.showMessageDialog(null,
+                "Producto      Precio\n" +
+                p1 + "      " + pr1 + "\n" +
+                p2 + "      " + pr2 + "\n" +
+                p3 + "      " + pr3 + "\n" +
+                p4 + "      " + pr4 + "\n\n" +
+                "Subtotal: " + subtotal +
+                "\nIVA: " + ivaTotal +
+                "\nTotal: " + total);
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+REINGENIERÍA (basada en Ejercicio10)
+a) Análisis
+
+El programa calcula la venta de varios productos aplicando IVA y mostrando el total a pagar.
+
+b) Datos
+Entrada:
+
+Precios de productos
+
+Salida:
+
+Subtotal
+IVA
+Total
+
+c) Proceso
+
+Sumar productos
+
+Calcular IVA
+
+Calcular total
+
+Mostrar resultados
+
+d) Variables
+Variable	Tipo	Descripción
+p1–p4	double	precios
+subtotal	double	suma
+iva	double	porcentaje
+ivaTotal	double	iva calculado
+total	double	total final
+e) Algoritmo casual
+
+Leer precios
+Sumarlos
+Calcular IVA
+Sumar IVA al subtotal
+Mostrar resultados
+
+f) Algoritmo computacional
+Inicio
+Leer productos
+subtotal = suma
+ivaTotal = subtotal * 0.16
+total = subtotal + ivaTotal
+Mostrar subtotal, ivaTotal y total
+Fin
+
+g) Diagrama de flujo (PSeInt)
+Algoritmo Practica5_reingenieria
+
+Definir p1,p2,p3,p4,subtotal,iva,ivaTotal,total Como Real
+
+p1 <- 20
+p2 <- 15
+p3 <- 30
+p4 <- 10
+
+iva <- 0.16
+
+subtotal <- p1+p2+p3+p4
+ivaTotal <- subtotal * iva
+total <- subtotal + ivaTotal
+
+Escribir "Subtotal: ", subtotal
+Escribir "IVA: ", ivaTotal
+Escribir "Total: ", total
+
+FinAlgoritmo
