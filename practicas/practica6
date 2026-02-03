@@ -1,0 +1,231 @@
+Área de un rectángulo
+
+a) Con BufferedReader
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+public class practica1_mc {
+
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
+
+        int base;
+        float altura;
+        double area;
+
+        System.out.print("Ingrese la base: ");
+        base = Integer.parseInt(entrada.readLine());
+
+        System.out.print("Ingrese la altura: ");
+        altura = Float.parseFloat(entrada.readLine());
+
+        area = base * altura;
+
+        System.out.println("El area del rectangulo es: " + area);
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+ b) Con Scanner
+import java.util.Scanner;
+
+public class ejercicio02_mc_scanner {
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        int base;
+        float altura;
+        double area;
+
+        System.out.print("Ingrese la base: ");
+        base = entrada.nextInt();
+
+        System.out.print("Ingrese la altura: ");
+        altura = entrada.nextFloat();
+
+        area = base * altura;
+
+        System.out.println("El area del rectangulo es: " + area);
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ c) Con JOptionPane
+import javax.swing.JOptionPane;
+
+public class ejercicio03_mc {
+
+    public static void main(String[] args) {
+
+        double base, altura, area;
+
+        base = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la base:"));
+        altura = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la altura:"));
+
+        area = base * altura;
+
+        JOptionPane.showMessageDialog(null,"El area del rectangulo es: " + area);
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ EJERCICIO 2
+Número entre 0 y 9999 mostrado al revés
+ BufferedReader
+import java.io.*;
+
+public class reverso_br {
+
+    public static void main(String[] args) throws Exception {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int num;
+        System.out.print("Ingrese numero: ");
+        num = Integer.parseInt(br.readLine());
+
+        int rev = 0;
+        while(num > 0){
+            rev = rev * 10 + num % 10;
+            num /= 10;
+        }
+
+        System.out.println("Numero invertido: " + rev);
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ Scanner
+import java.util.Scanner;
+
+public class reverso_scanner {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+        int rev = 0;
+
+        while(num > 0){
+            rev = rev * 10 + num % 10;
+            num /= 10;
+        }
+
+        System.out.println("Numero invertido: " + rev);
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ JOptionPane
+import javax.swing.JOptionPane;
+
+public class reverso_dialogo {
+
+    public static void main(String[] args) {
+
+        int num = Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero:"));
+        int rev = 0;
+
+        while(num > 0){
+            rev = rev * 10 + num % 10;
+            num /= 10;
+        }
+
+        JOptionPane.showMessageDialog(null,"Numero invertido: " + rev);
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ EJERCICIO 3
+Diferencia de días entre dos fechas (meses de 30 días)
+import java.util.Scanner;
+
+public class diferencia_fechas {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int d1,m1,a1,d2,m2,a2;
+
+        System.out.print("Dia 1: "); d1=sc.nextInt();
+        System.out.print("Mes 1: "); m1=sc.nextInt();
+        System.out.print("Año 1: "); a1=sc.nextInt();
+
+        System.out.print("Dia 2: "); d2=sc.nextInt();
+        System.out.print("Mes 2: "); m2=sc.nextInt();
+        System.out.print("Año 2: "); a2=sc.nextInt();
+
+        int f1 = a1*360 + m1*30 + d1;
+        int f2 = a2*360 + m2*30 + d2;
+
+        System.out.println("Diferencia de dias: " + Math.abs(f2-f1));
+    }
+}
+
+ REINGENIERÍA (basada en área del rectángulo)
+🔹 Análisis
+
+Calcular el área de un rectángulo solicitando base y altura.
+
+🔹 Datos
+
+Entrada:
+
+base
+
+altura
+
+Salida:
+
+area
+
+🔹 Proceso
+
+Área = base × altura
+
+🔹 Variables
+Variable	Tipo	Descripción
+base	Real	base
+altura	Real	altura
+area	Real	resultado
+🔹 Algoritmo casual
+
+Leer base
+Leer altura
+Multiplicar
+Mostrar área
+
+🔹 Algoritmo computacional
+Inicio
+Leer base
+Leer altura
+area = base * altura
+Mostrar area
+Fin
+
+🔹 Diagrama PSeInt
+Algoritmo area_rectangulo
+
+Definir base,altura,area Como Real
+
+Escribir "Base:"
+Leer base
+Escribir "Altura:"
+Leer altura
+
+area <- base * altura
+
+Escribir "Area:",area
+
+FinAlgoritmo
