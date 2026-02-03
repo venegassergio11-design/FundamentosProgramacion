@@ -1,1 +1,101 @@
+//Ejercicio 1
+
+import java.util.Scanner;
+
+public class Ejercicio1_Muro {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        double X, Y;
+        double largoLad, altoLad;
+        double juntaH, juntaV;
+        double areaMuro, areaLadrillo;
+        double areaCastillos, areaUtil;
+        double cantidadLadrillos;
+        int N;
+        double P;
+
+        System.out.print("Ingrese la longitud del muro (m): ");
+        X = sc.nextDouble();
+
+        System.out.print("Ingrese la altura del muro (m): ");
+        Y = sc.nextDouble();
+
+        System.out.print("Ingrese el largo del ladrillo (m): ");
+        largoLad = sc.nextDouble();
+
+        System.out.print("Ingrese el alto del ladrillo (m): ");
+        altoLad = sc.nextDouble();
+
+        System.out.print("Ingrese el espesor de la junta horizontal (m): ");
+        juntaH = sc.nextDouble();
+
+        System.out.print("Ingrese el espesor de la junta vertical (m): ");
+        juntaV = sc.nextDouble();
+
+        System.out.print("Ingrese el numero de castillos: ");
+        N = sc.nextInt();
+
+        System.out.print("Ingrese la longitud de cada castillo (m): ");
+        P = sc.nextDouble();
+
+        areaMuro = X * Y;
+        areaCastillos = N * P * Y;
+        areaUtil = areaMuro - areaCastillos;
+
+        areaLadrillo = (largoLad + juntaV) * (altoLad + juntaH);
+
+        cantidadLadrillos = areaUtil / areaLadrillo;
+
+        System.out.println("\nCantidad aproximada de ladrillos necesarios: " + cantidadLadrillos);
+
+        sc.close();
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Ejercicio2
+
+import java.util.Scanner;
+
+public class Ejercicio2_Losa {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        double X, Y, N;
+        double volumen;
+        double cemento, arena, grava;
+        double agua;
+
+        System.out.print("Ingrese el largo de la losa (m): ");
+        X = sc.nextDouble();
+
+        System.out.print("Ingrese el ancho de la losa (m): ");
+        Y = sc.nextDouble();
+
+        System.out.print("Ingrese el espesor de la losa (m): ");
+        N = sc.nextDouble();
+
+        volumen = X * Y * N;
+
+        cemento = volumen * 1.0 / 6.0;
+        arena = volumen * 2.0 / 6.0;
+        grava = volumen * 3.0 / 6.0;
+        agua = volumen * 180;
+
+        System.out.println("\nVolumen total de concreto (m3): " + volumen);
+        System.out.println("Cemento necesario (m3): " + cemento);
+        System.out.println("Arena necesaria (m3): " + arena);
+        System.out.println("Grava necesaria (m3): " + grava);
+        System.out.println("Agua necesaria (litros): " + agua);
+
+        sc.close();
+    }
+}
+
 
