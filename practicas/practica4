@@ -1,0 +1,81 @@
+Clase Java completa – Práctica 4
+public class Practica1 {
+
+    public static void main(String[] args) {
+
+        // ===============================
+        // EJERCICIO 1
+        // Mensaje básico
+        // ===============================
+        System.out.println("Mi Alma Mater es UAT");
+
+        // ===============================
+        // EJERCICIO 2
+        // Uso de print y println
+        // ===============================
+        System.out.print("Hola ");
+        System.out.print("mundo ");
+        System.out.println("desde Java");
+
+        System.out.println("Linea 1");
+        System.out.println("Linea 2");
+
+        // ===============================
+        // EJERCICIO 3
+        // Operaciones matemáticas
+        // ===============================
+        int a = 10;
+        int b = 5;
+
+        System.out.println("Suma: " + (a + b));
+        System.out.println("Resta: " + (a - b));
+        System.out.println("Multiplicacion: " + (a * b));
+        System.out.println("Division: " + (a / b));
+
+        // ===============================
+        // EJERCICIO 4
+        // Uso de printf
+        // ===============================
+        double precio = 25.5;
+        int cantidad = 4;
+
+        System.out.printf("Precio: %.2f\n", precio);
+        System.out.printf("Cantidad: %d\n", cantidad);
+
+        // ===============================
+        // EJERCICIO 5
+        // printf con varias variables
+        // ===============================
+        double total = precio * cantidad;
+        System.out.printf("Total a pagar: %.2f\n", total);
+
+        // ===============================
+        // EJERCICIO 6
+        // Uso de especificadores de formato
+        // ===============================
+        String nombre = "Veronica";
+        int edad = 19;
+
+        System.out.printf("Nombre: %s Edad: %d\n", nombre, edad);
+
+        // ===============================
+        // EJERCICIO 7
+        // Secuencias de escape
+        // ===============================
+        System.out.println("Hola\nMundo");       // Salto de linea
+        System.out.println("Columna1\tColumna2"); // Tabulador
+        System.out.println("Comillas: \"Java\"");
+        System.out.println("Diagonal invertida: \\");
+
+        // ===============================
+        // EJERCICIO 8
+        // Ejemplo final combinado
+        // ===============================
+        int x = 8;
+        int y = 3;
+
+        System.out.printf("La suma de %d + %d = %d\n", x, y, x + y);
+        System.out.printf("La multiplicacion es: %d\n", x * y);
+
+    }
+}
