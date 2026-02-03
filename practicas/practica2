@@ -1,0 +1,81 @@
+1. Diagrama: Área del triángulo
+Algoritmo amatricula_area_triangulo
+
+Definir base, altura, area Como Real
+
+Escribir "Dame el valor de la base:"
+Leer base
+
+Escribir "Dame el valor de la altura:"
+Leer altura
+
+area <- (base * altura) / 2
+
+Escribir "El area del triangulo es: ", area
+
+FinAlgoritmo
+
+ 2. Diagrama: Entrada y salida simple
+Algoritmo amatricula_entrada_salida
+
+Definir nombre Como Caracter
+
+Escribir "Ingresa tu nombre:"
+Leer nombre
+
+Escribir "Hola ", nombre
+
+FinAlgoritmo
+
+ 3. Diagrama: Condicional (Si)
+Algoritmo amatricula_condicional
+
+Definir numero Como Entero
+
+Escribir "Dame un numero:"
+Leer numero
+
+Si numero > 0 Entonces
+	Escribir "El numero es positivo"
+SiNo
+	Escribir "El numero es negativo o cero"
+FinSi
+
+FinAlgoritmo
+
+ 4. Diagrama: Ciclo Mientras
+Algoritmo amatricula_mientras
+
+Definir i Como Entero
+i <- 1
+
+Mientras i <= 5 Hacer
+	Escribir i
+	i <- i + 1
+FinMientras
+
+FinAlgoritmo
+
+ 5. Diagrama: Ciclo Para
+Algoritmo amatricula_para
+
+Definir i Como Entero
+
+Para i <- 1 Hasta 5 Con Paso 1 Hacer
+	Escribir i
+FinPara
+
+FinAlgoritmo
+
+ 6. Diagrama: Ciclo Repetir
+Algoritmo amatricula_repetir
+
+Definir x Como Entero
+x <- 1
+
+Repetir
+	Escribir x
+	x <- x + 1
+Hasta Que x > 5
+
+FinAlgoritmo
