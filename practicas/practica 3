@@ -1,0 +1,119 @@
+🔹 DIAGRAMA 1
+Número de ladrillos para una barda
+Algoritmo amatricula_ejemplo1_ladrillos
+
+Definir largo, alto, area, ladrillos Como Real
+
+Escribir "Ingrese el largo de la barda:"
+Leer largo
+
+Escribir "Ingrese el alto de la barda:"
+Leer alto
+
+area <- largo * alto
+ladrillos <- area * 50
+
+Escribir "Numero de ladrillos necesarios: ", ladrillos
+
+FinAlgoritmo
+
+🔹 DIAGRAMA 2
+Conversión de pesos a dólares
+Algoritmo amatricula_ejemplo2_conversion
+
+Definir pesos, dolares, tipoCambio Como Real
+tipoCambio <- 17.5
+
+Escribir "Ingrese la cantidad en pesos:"
+Leer pesos
+
+dolares <- pesos / tipoCambio
+
+Escribir "Equivalente en dolares: ", dolares
+
+FinAlgoritmo
+
+🔹 DIAGRAMA 3
+Distancia recorrida por un automóvil
+Algoritmo amatricula_ejemplo3_distancia
+
+Definir velocidad, tiempo, distancia Como Real
+
+Escribir "Ingrese la velocidad del auto (km/h):"
+Leer velocidad
+
+Escribir "Ingrese el tiempo (horas):"
+Leer tiempo
+
+distancia <- velocidad * tiempo
+
+Escribir "La distancia recorrida es: ", distancia, " km"
+
+FinAlgoritmo
+
+🔹 DIAGRAMA 4
+Practica03_tarea01
+
+Cálculo de ladrillos para muro con castillos
+
+Algoritmo amatricula_Practica03_tarea01
+
+Definir Xmuro, Ymuro Como Real
+Definir Lladrillo, Aladrillo Como Real
+Definir Jv, Jh Como Real
+Definir Ncastillos, Lcastillo Como Real
+Definir Areauro, Areacastillos, Areautil, NL Como Real
+
+Escribir "Longitud del muro:"
+Leer Xmuro
+Escribir "Altura del muro:"
+Leer Ymuro
+
+Areauro <- Xmuro * Ymuro
+
+Escribir "Longitud del ladrillo:"
+Leer Lladrillo
+Escribir "Altura del ladrillo:"
+Leer Aladrillo
+Escribir "Junta vertical:"
+Leer Jv
+Escribir "Junta horizontal:"
+Leer Jh
+
+Escribir "Numero de castillos:"
+Leer Ncastillos
+Escribir "Longitud del castillo:"
+Leer Lcastillo
+
+Areacastillos <- Ncastillos * Lcastillo * Ymuro
+Areautil <- Areauro - Areacastillos
+
+NL <- Areautil / ((Lladrillo + Jv) * (Aladrillo + Jh))
+
+Escribir "Numero de ladrillos necesarios: ", NL
+
+FinAlgoritmo
+
+🔹 DIAGRAMA 5
+Practica03_tarea02
+
+Material para una loza
+
+Algoritmo amatricula_Practica03_tarea02
+
+Definir largo, ancho, espesor, volumen Como Real
+
+Escribir "Ingrese el largo de la loza:"
+Leer largo
+
+Escribir "Ingrese el ancho de la loza:"
+Leer ancho
+
+Escribir "Ingrese el espesor de la loza:"
+Leer espesor
+
+volumen <- largo * ancho * espesor
+
+Escribir "Volumen de la loza: ", volumen, " m3"
+
+FinAlgoritmo
